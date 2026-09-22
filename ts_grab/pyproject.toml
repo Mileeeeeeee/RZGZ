@@ -1,0 +1,31 @@
+[project]
+name = "ts-grab"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.1",
+    "opencv-python>=5.0.0.93",
+    "pandas>=3.0.5",
+    "pydantic>=2.13.4",
+    "pyserial>=3.5",
+    "pyyaml",
+    "scipy>=1.18.0",
+    "scipy-stubs~=1.18.0",
+    "tqdm>=4.65.0",
+]
+
+[project.scripts]
+ts-grab = "ts_grab:main"
+
+[[tool.uv.index]]
+name = "tsinghua"
+url = "https://uv.agentsmirror.com/pypi/simple"
+default = true
+default-index = "https://pypi.tuna.tsinghua.edu.cn/simple"
+
+[build-system]
+requires = ["uv_build>=0.12.1,<0.13.0"]
+build-backend = "uv_build"
